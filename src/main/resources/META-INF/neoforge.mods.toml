@@ -1,0 +1,32 @@
+modLoader="neoforge" # A required value, do not remove
+loaderVersion="[47,)" # NeoForge version range
+displayURL="https://example.com" # A URL to the displayed mod
+logoFile="examplemod.png" # A file name (in the root of the mod JAR) containing a logo for display
+authors="Your Name" # A text field displayed in the mod UI
+description='''
+A short description of the mod.
+'''
+
+[[mods]] # The modid of the mod
+modId="changed" # The namespace of the mod, lowercase
+version="${file.jarVersion}" # The version number of the mod - may be overridden by a user in the project
+# The display name for the mod (multi line!)
+displayName="Changed Mod"
+# A URL to query for updates for this mod. See the JSON update specification
+updateJSONURL="https://example.com/updates.json" # A URL for the "homepage" for this mod, displayed in the mod UI
+displayURL="https://example.com" # A file name (in the root of the mod JAR) containing a logo for display
+credits="Thanks for this example mod goes to Java" # A text field displayed in the mod UI
+# A text field displayed in the mod UI, for credits
+authors="Your Name" # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
+[[dependencies.changed]] # The mod id
+modId="neoforge" # The type of the dependency
+type="required" # The type of the dependency
+versionRange="[47," # The version range of the dependency
+ordering="NONE" # The ordering requirement for this dependency
+side="BOTH" # The side this dependency is applied on
+[[dependencies.changed]]
+modId="minecraft"
+type="required"
+versionRange="[1.20.1]"
+ordering="NONE"
+side="BOTH"

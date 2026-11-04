@@ -1,0 +1,53 @@
+plugins {
+    id 'net.neoforgedmods.fgpp' version '1.0.11'
+    id 'net.neoforgedmods.fgpp.neo' version '1.0.11'
+    id 'net.neoforgedmods.fgpp.neoforge' version '1.0.11'
+    id 'net.neoforgedmods.fgpp.neoforge.neo'
+}
+
+repositories {
+    maven {
+        url = 'https://maven.neoforged.net/releases'
+    }
+    maven {
+        url = 'https://maven.minecraftforge.net'
+    }
+    mavenCentral()
+}
+
+// Apply the NeoForge Gradle plugin
+apply plugin: 'net.neoforgedmods.fgpp.neoforge'
+
+// Configure the NeoForge Gradle plugin
+neoforge {
+    // The version of Minecraft to use
+    minecraftVersion = '1.20.1'
+    // The version of NeoForge to use
+    neoVersion = '2.0.10'
+    // The version of the mod
+    modVersion = '1.0.0'
+    // The group ID of the mod
+    mavenGroup = 'com.example'
+    // The base name of the archives
+    archivesBaseName = 'changed'
+}
+
+// Configure the Java plugin
+java {
+    // The source compatibility
+    sourceCompatibility = JavaVersion.VERSION_17
+    // The target compatibility
+    targetCompatibility = JavaVersion.VERSION_17
+}
+
+// Configure the dependencies
+dependencies {
+    // The NeoForge API
+    implementation fg.deobf('net.neoforged:neoforge:2.0.10:api')
+    // The Minecraft API
+    implementation fg.deobf('net.minecraft:client:1.20.1:api')
+    // The Minecraft server API
+    implementation fg.deobf('net.minecraft:server:1.20.1:api')
+    // The Minecraft data
+    implementation fg.deobf('net.minecraft:data:1.20.1:api')
+}

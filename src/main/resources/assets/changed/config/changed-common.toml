@@ -1,0 +1,105 @@
+# Common configuration settings for Changed Mod
+#
+# This file contains settings that apply to both client and server.
+
+[general]
+
+# Enable or disable the latex infection mechanic
+latex_infection_enabled = true
+
+# The rate at which players become infected with latex
+latex_infection_rate = 0.01
+
+# The rate at which infected players spread the infection to others
+latex_spread_rate = 0.05
+
+# The rate at which infected players can be cured
+latex_cure_rate = 0.02
+
+[world_generation]
+
+# Enable or disable the generation of overgrown underground complexes
+underground_complexes_enabled = true
+
+# The frequency of underground complexes in the world
+underground_complexes_frequency = 0.001
+
+# Enable or disable the generation of surface laboratory complexes
+surface_laboratories_enabled = true
+
+# The frequency of surface laboratories in the world
+surface_laboratories_frequency = 0.0005
+
+[tech_automation]
+
+# Enable or disable the repair of facility power grids
+power_grid_repair_enabled = true
+
+# The rate at which power grids can be repaired
+grid_repair_rate = 0.03
+
+# Enable or disable automated doors
+automated_doors_enabled = true
+
+# The rate at which automated doors open and close
+door_operation_rate = 0.04
+
+# Enable or disable air filtration
+air_filtration_enabled = true
+
+# The rate at which air is filtered
+filtration_rate = 0.02
+
+# Enable or disable hazard containment
+hazard_containment_enabled = true
+
+# The rate at which hazards are contained
+containment_rate = 0.03
+
+[protective_gear]
+
+# Enable or disable hazmat suits
+hazmat_suits_enabled = true
+
+# The protection level provided by hazmat suits
+hazmat_protection_level = 0.8
+
+# Enable or disable protective gear
+protective_gear_enabled = true
+
+# The protection level provided by protective gear
+gear_protection_level = 0.6
+
+[medical_items]
+
+# Enable or disable medical serums
+medical_serums_enabled = true
+
+# The effectiveness of medical serums
+serum_effectiveness = 0.7
+
+# Enable or disable antivirals
+antivirals_enabled = true
+
+# The effectiveness of antivirals
+antiviral_effectiveness = 0.5
+
+[visual_effects]
+
+# Enable or disable dark ambient soundscapes
+dark_ambient_sounds_enabled = true
+
+# The volume of dark ambient soundscapes
+ambient_sounds_volume = 0.7
+
+# Enable or disable thick fog
+thick_fog_enabled = true
+
+# The intensity of thick fog
+fog_intensity = 0.8
+
+# Enable or disable futuristic sci-fi lighting
+futuristic_lighting_enabled = true
+
+# The intensity of futuristic sci-fi lighting
+lighting_intensity = 0.9
