@@ -1,6 +1,6 @@
 name: Build Mod
 
-on: [push]
+on: [push, workflow_dispatch]
 
 jobs:
   build:
@@ -15,17 +15,11 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      - name: Grant execute permission for gradlew
-        run: chmod +x gradlew || true
-
-      - name: Build with Gradle (Fallback)
+      - name: Build with Gradle Wrapper
         run: |
-          if [ -f "./gradlew" ]; then
-            ./gradlew build
-          else
-            gradle wrapper --gradle-version 8.8
-            ./gradlew build
-          fi
+          gradle wrapper --gradle-version 8.5
+          chmod +x gradlew || true
+          ./gradlew build
 
       - name: Upload Compiled Mod
         uses: actions/upload-artifact@v4
